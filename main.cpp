@@ -57,7 +57,7 @@ int main()
     }
 
     else{
-        cout << "fail";
+        cout << "fail1";
     }
 
 
