@@ -41,6 +41,13 @@ int main()
 
         int pos = file.tellg();
 
+        while (pos < filesize){
+            pngfile* p_png = reinterpret_cast<pngfile*>(&chunk[pos]);
+            cout << "lenght: " <<Reverse_DWord(int(p_png -> lenght)) << endl;
+            cout << "Type: " <<Reverse_DWord(int(p_png -> type)) << endl;
+
+
+
 
     }
 
