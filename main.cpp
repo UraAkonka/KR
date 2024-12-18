@@ -14,6 +14,15 @@ struct pngfile{
 
 #pragma pack(pop)
 
+uint32_t Reverse_DWord(uint32_t value) {
+    return ((value >> 24) & 0xff) |
+           ((value >> 8) & 0xff00) |
+           ((value << 8) & 0xff0000) |
+           ((value << 24) & 0xff000000);
+}
+
+
+
 int main(){
     return 0;
 }
