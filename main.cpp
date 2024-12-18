@@ -22,7 +22,15 @@ uint32_t Reverse_DWord(uint32_t value) {
 }
 
 
+int main()
+{
+    ifstream file("D:\\zachet\\PNG\\promo.png",ios::binary);
+    if (file.is_open()){
+    }
+    else{
+        cout << "fail";
+    }
 
-int main(){
+
     return 0;
 }
