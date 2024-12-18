@@ -30,6 +30,18 @@ int main()
         int filesize = file.tellg();
         cout << "filesize: " << filesize << endl;
 
+        vector<char> chunk(filesize,0);
+
+        file.seekg(0,ios::beg);
+
+        file.read(chunk.data(),filesize);
+
+
+        file.seekg(8,ios::beg);
+
+        int pos = file.tellg();
+
+
     }
 
     else{
