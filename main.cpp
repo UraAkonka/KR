@@ -26,7 +26,12 @@ int main()
 {
     ifstream file("D:\\zachet\\PNG\\promo.png",ios::binary);
     if (file.is_open()){
+        file.seekg(0,ios::end);
+        int filesize = file.tellg();
+        cout << "filesize: " << filesize << endl;
+
     }
+
     else{
         cout << "fail";
     }
