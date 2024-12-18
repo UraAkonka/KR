@@ -43,10 +43,19 @@ int main()
 
         while (pos < filesize){
             pngfile* p_png = reinterpret_cast<pngfile*>(&chunk[pos]);
-            cout << "lenght: " <<Reverse_DWord(int(p_png -> lenght)) << endl;
-            cout << "Type: " <<Reverse_DWord(int(p_png -> type)) << endl;
+            cout << "lenght: " << Reverse_DWord(int(p_png -> lenght)) << endl;
+
+            string nametype(&chunk[pos+4],4);
+            cout << "Type: " << Reverse_DWord(int(p_png -> type)) << " " << nametype << endl;
+
             file.seekg(pos + Reverse_DWord(int(p_png -> lenght)) + 4 + 8,ios::beg);
+
             pos = file.tellg();
+
+            if (nametype == "IEND"){
+                cout <<"Real end file: "<< (pos - 4 - Reverse_DWord(int(p_png -> lenght)))<< endl;
+            }
+
             cout << "Pos: " << pos << endl;
 
         }
