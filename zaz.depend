@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1734508117 source:d:\zachet\zaz\main.cpp
+	<iostream>
+	<windows.h>
+	<vector>
+	<fstream>
+
